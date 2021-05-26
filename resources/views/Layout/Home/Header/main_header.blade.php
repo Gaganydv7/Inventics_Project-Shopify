@@ -12,7 +12,7 @@
           <!-- /Menu Toggle -->
         </div>
         <div class="col-auto hdr-logo">
-          <a href="{{route('index')}}" class="logo"><img srcset="{{asset('images/skins/medical/logo.png')}} , {{asset('images/skins/medical/logo.png')}}" alt="Logo"></a>
+          <a href="##" class="logo"><img srcset="{{asset('images/skins/medical/logo.png')}} , {{asset('images/skins/medical/logo.png')}}" alt="Logo"></a>
         </div>
         <!--navigation-->
         <div class="hdr-nav hide-mobile nav-holder-s">
@@ -70,7 +70,7 @@
             <!-- /Menu Toggle -->
           </div>
           <div class="col-auto hdr-logo">
-            <a href="{{route('index')}}" class="logo"><img srcset="{{asset('images/skins/medical/logo.png , images/skins/medical/logo.png')}}" alt="Logo"></a>
+            <a href="##" class="logo"><img srcset="{{asset('images/skins/medical/logo.png , images/skins/medical/logo.png')}}" alt="Logo"></a>
           </div>
           <!--navigation-->
           <div class="hdr-nav hide-mobile nav-holder justify-content-center">
@@ -112,9 +112,9 @@
               <li class="mmenu-item--simple"><a href="#" class="no-uppercase">Pages</a>
                 <div class="mmenu-submenu">
                   <ul class="submenu-list">
-                    <li><a href="{{asset('product/'.$cat_product[$i]->product_sub_cat.'/'.$cat_product[$i]->product_cat.'/'.$cat_product[$i]->slug)}}">Product page</a>
+                    <li><a href="{{asset('page1/'.$cat_product[$i]->product_sub_cat.'/'.$cat_product[$i]->product_cat.'/'.$cat_product[$i]->slug)}}">Product page</a>
                       <ul>
-                        <li><a href="{{asset('product/'.$cat_product[$i]->product_sub_cat.'/'.$cat_product[$i]->product_cat.'/'.$cat_product[$i]->slug)}}">Product page variant 1<span class="menu-label menu-label--color3">Popular</span></a></li>
+                        <li><a href="{{asset('page1/'.$cat_product[$i]->product_sub_cat.'/'.$cat_product[$i]->product_cat.'/'.$cat_product[$i]->slug)}}">Product page variant 1<span class="menu-label menu-label--color3">Popular</span></a></li>
                         <li><a href="{{route('page2')}}">Product page variant 2</a></li>
                         <li><a href="{{route('page3')}}">Product page variant 3</a></li>
                         <li><a href="{{route('page4')}}">Product page variant 4</a></li>
@@ -122,26 +122,26 @@
                         <li><a href="{{route('page6')}}">Product page variant 6</a></li>
                         <li><a href="{{route('page7')}}">Product page variant 7</a></li>
                       </ul>
-                    </li>
-                    <li><a href="##">Category page</a>
+                    </li> 
+                    <li><a href="{{route('sidebar',$subcatslug[rand(0,count($subcat)-1)])}}">Category page</a>
                       <ul>
-                        <li><a href="##">Left sidebar filters</a></li>
+                        <li><a href="{{route('sidebar',$subcatslug[rand(0,count($subcat)-1)])}}">Left sidebar filters</a></li>
                         <li><a href="{{route('close')}}">Closed filters</a></li>
                         <li><a href="{{route('horizontal')}}">Horizontal filters</a></li>
                         <li><a href="{{route('listing')}}">Listing View</a></li>
                         <li><a href="{{route('empty')}}">Empty category</a></li>
                       </ul>
                     </li>
-                    <li><a href="{{route('cartpage')}}">Cart & Checkout</a>
+                    <li><a href="##">Cart & Checkout</a>
                       <ul>
-                        <li><a href="{{route('cartpage')}}">Cart Page</a></li>
+                        <li><a href="##">Cart Page</a></li>
                         <li><a href="{{route('emptycart')}}">Empty cart</a></li>
                         <li><a href="{{route('varient1')}}">Checkout variant 1</a></li>
                         <li><a href="{{route('varient2')}}">Checkout variant 2</a></li>
                         <li><a href="{{route('varient3')}}">Checkout variant 3</a></li>
                       </ul>
                     </li>
-                    <li><a href="{{route('login')}}">Account</a>
+                    <li><a href="##">Account</a>
                       <ul>
                         <li><a href="{{route('login')}}">Login</a></li>
                         <li><a href="{{route('create')}}">Create account</a></li>
@@ -312,9 +312,9 @@
             <a href="#" class="nav-viewall">view all</a>
           </div>
           <ul class="nav nav-level-1">
-            <li><a href="{{route('index')}}">Layouts<span class="menu-label menu-label--color1">New</span><span class="arrow"><i class="icon-angle-right"></i></span></a>
+            <li><a href="##">Layouts<span class="menu-label menu-label--color1">New</span><span class="arrow"><i class="icon-angle-right"></i></span></a>
               <ul class="nav-level-2">
-                <li><a href="{{route('index')}}">Fashion (Default) Skin</a></li>
+                <li><a href="##">Fashion (Default) Skin</a></li>
                 <li><a href="index-sport.html">Sport Skin</a></li>
                 <li><a href="index-helloween.html">Halloween Skin</a></li>
                 <li><a href="index-medical.html}">Medical Skin</a></li>
@@ -350,25 +350,25 @@
                     <li><a href="{{route('page7')}}">Product page variant 7</a></li>
                   </ul>
                 </li>
-                <li><a href="##">Category page<span class="arrow"><i class="icon-angle-right"></i></span></a>
+                <li><a href="{{route('sidebar',$subcatslug[rand(0,count($subcat)-1)])}}">Category page<span class="arrow"><i class="icon-angle-right"></i></span></a>
                   <ul class="nav-level-3">
-                    <li><a href="##">Left sidebar filters</a></li>
+                    <li><a href="{{route('sidebar',$subcatslug[rand(0,count($subcat)-1)])}}">Left sidebar filters</a></li>
                     <li><a href="{{route('close')}}">Closed filters</a></li>
                     <li><a href="{{route('horizontal')}}">Horizontal filters</a></li>
                     <li><a href="{{route('listing')}}">Listing View</a></li>
                     <li><a href="{{route('empty')}}">Empty category</a></li>
                   </ul>
                 </li>
-                <li><a href="{{route('cartpage')}}">Cart & Checkout<span class="arrow"><i class="icon-angle-right"></i></span></a>
+                <li><a href="##">Cart & Checkout<span class="arrow"><i class="icon-angle-right"></i></span></a>
                   <ul class="nav-level-3">
-                    <li><a href="{{route('cartpage')}}">Cart Page</a></li>
+                    <li><a href="##">Cart Page</a></li>
                     <li><a href="{{route('emptycart')}}">Empty cart</a></li>
                     <li><a href="{{route('varient1')}}">Checkout variant 1</a></li>
                     <li><a href="{{route('varient2')}}">Checkout variant 2</a></li>
                     <li><a href="{{route('varient3')}}">Checkout variant 3</a></li>
                   </ul>
                 </li>
-                <li><a href="{{route('login')}}">Account<span class="arrow"><i class="icon-angle-right"></i></span></a>
+                <li><a href="##">Account<span class="arrow"><i class="icon-angle-right"></i></span></a>
                   <ul class="nav-level-3">
                     <li><a href="{{route('login')}}">Login</a></li>
                     <li><a href="{{route('create')}}">Create account</a></li>
@@ -494,31 +494,103 @@
       </div>
     </div>
   </div>
+
+
+
+
+
+
+
+
+<div>
   <!-- /Mobile Menu -->
   <div class="dropdn-content account-drop" id="dropdnAccount">
-    <div class="dropdn-content-block">
+    <div class="dropdn-content-block" >
       <div class="dropdn-close"><span class="js-dropdn-close">Close</span></div>
       <ul>
-        <li><a href="{{route('login')}}"><span>Log In</span><i class="icon-login"></i></a></li>
-        <li><a href="{{route('create')}}"><span>Register</span><i class="icon-user2"></i></a></li>
-        <li><a href="{{route('varient1')}}"><span>Checkout</span><i class="icon-card"></i></a></li>
-      </ul>
-      <div class="dropdn-form-wrapper">
+      @if(Route::has('login')) 
+        @auth
+        <hr>
+          <li ><a href="##">{{Auth::user()->name}}<i class="icon-user"></i></a></li>
+         <li><a href="##"><span>Checkout</span><i class="icon-card"></i></a></li>
+         <br>
+        <li><button class="btn btn-success <a href="{{ route('logout') }}"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">Logout
+        </button></a>
+        
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+         @csrf
+        </form>
+        </li>
+        @else 
+        <li><a href="{{ route('login') }}"><span>Log In</span><i class="icon-login"></i></a></li>
+          @if(Route::has('register'))
+          <li><a href="{{ route('create') }}"><span>Register</span><i class="icon-user2"></i></a></li>
+ 
+
+<br>
+<hr>
+<div>
         <h5>Quick Login</h5>
-        <form action="#">
+        <form method="POST" action="{{ route('login') }}">
+          @csrf
           <div class="form-group">
-            <input type="text" class="form-control form-control--sm is-invalid" placeholder="Enter your e-mail">
-            <div class="invalid-feedback">Can't be blank</div>
+            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Enter your e-mail" required autocomplete="email" autofocus>
+            @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
           </div>
           <div class="form-group">
-            <input type="password" class="form-control form-control--sm" placeholder="Enter your password">
-          </div>
-          <button type="submit" class="btn">Enter</button>
+          <!-- div class="col-md-10"> -->
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Enter your password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+          
+          <!-- </div> -->
+<!-- 
+          <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+
+                            <div class="col-md-10">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div> -->
+
+          
+                                          <button type="submit" class="btn btn-primary">
+                                    {{ __('Login') }}
+        </button>
         </form>
       </div>
+        @endif
+      @endauth
+      @endif
+
+      </ul>
+
     </div>
     <div class="drop-overlay js-dropdn-close"></div>
   </div>
+  </div>
+
+
+
+
+
+
+
   <div class="dropdn-content minicart-drop" id="dropdnMinicart">
     <div class="dropdn-content-block">
       <div class="dropdn-close"><span class="js-dropdn-close">Close</span></div>
@@ -593,7 +665,7 @@
           <div class="minicart-drop-total-price col" data-header-cart-total="">$340</div>
         </div>
         <div class="minicart-drop-actions">
-          <a href="{{route('cartpage')}}" class="btn btn--md btn--grey"><i class="icon-basket"></i><span>Cart Page</span></a>
+          <a href="{{asset('cartpage/'.$cat_product[$i]->product_sub_cat.'/'.$cat_product[$i]->product_cat.'/'.$cat_product[$i]->slug)}}" class="btn btn--md btn--grey"><i class="icon-basket"></i><span>Cart Page</span></a>
           <a href="{{route('varient1')}}" class="btn btn--md"><i class="icon-checkout"></i><span>Check out</span></a>
         </div>
         <ul class="payment-link mb-2">

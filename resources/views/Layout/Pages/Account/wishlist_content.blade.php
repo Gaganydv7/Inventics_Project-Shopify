@@ -5,7 +5,7 @@
     <div class="holder breadcrumbs-wrap mt-0">
       <div class="container">
         <ul class="breadcrumbs">
-          <li><a href="{{route('index')}}">Home</a></li>
+          <li><a href="##">Home</a></li>
           <li><span>My account</span></li>
         </ul>
       </div>
@@ -29,7 +29,7 @@
             <div class="empty-wishlist js-empty-wishlist text-center py-3 py-sm-5 d-none" style="opacity: 0;">
               <h3>Your Wishlist is empty</h3>
               <div class="mt-5">
-                <a href="{{route('index')}}" class="btn">Continue shopping</a>
+                <a href="##" class="btn">Continue shopping</a>
               </div>
             </div>
             <div class="prd-grid-wrap position-relative">

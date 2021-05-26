@@ -81,8 +81,30 @@ class pagesController extends Controller
 
 
     //Cart
-    public function cartpage(){
-        return view('Layout.Pages.Cart_Checkout.cartpage_content');    
+    public function cartpage($cat_group,$cat_name,$slug){
+        $categories=$this->getsubgroup();
+        $sub_categories=$this->getsubgroupcategories();
+        $cat_product=$this->getcategoriesproduct();
+        // dd($cat_product);
+        $img_url=$this->server_image_path;
+        // $current_currency=$this->current_currency;
+
+        $product=DB::table('products')->where('slug',$slug)->first();
+        // dd($product);
+        $product_images=DB::table('images')->where('imageable_id',$product->id)->get();
+        // dd($product_images);
+        $current_subgroup=DB::table('category_sub_groups')
+        ->where('slug',$cat_group)->first();
+        // dd($current_subgroup);
+        $current_category=DB::table('categories')
+        ->where('slug',$cat_name)->first();
+        // dd($current_category);
+        $currency=$this->currency;
+        // dd($current_category);
+        // $tempProduct=true;
+
+        return view('Layout.Pages.Cart_Checkout.cartpage_content',compact('categories','sub_categories','cat_product','img_url','product','product_images','current_subgroup','current_category','currency'));
+        // return view('Layout.Pages.Cart_Checkout.cartpage_content');    
     }
     public function emptycart(){
         return view('Layout.Pages.Cart_Checkout.emptycart_content');    
@@ -96,60 +118,7 @@ class pagesController extends Controller
     public function varient3(){
         return view('Layout.Pages.Cart_Checkout.var3_content');    
     }
-
-
-    //Account
-    public function login(){
-        return view('Layout.Pages.Account.login_content');    
-    }
-    public function create(){
-        return view('Layout.Pages.Account.createacc_content');    
-    }
-    public function details(){
-        return view('Layout.Pages.Account.accdetails_content');    
-    }
-    public function address(){
-        return view('Layout.Pages.Account.accaddress_content');    
-    }
-    public function order(){
-        return view('Layout.Pages.Account.orderhistory_content');    
-    }
-    public function wishlist(){
-        return view('Layout.Pages.Account.wishlist_content');    
-    }
-
-
-    //Blog
-    public function rightside(){
-        return view('Layout.Pages.Blog.rightside_content');    
-    }
-    public function leftside(){
-        return view('Layout.Pages.Blog.leftside_content');    
-    }
-    public function noside(){
-        return view('Layout.Pages.Blog.noside_content');    
-    }
-    public function stickyside(){
-        return view('Layout.Pages.Blog.stickyside_content');    
-    }
-    public function grid(){
-        return view('Layout.Pages.Blog.grid_content');    
-    }
-
-    public function blogpost($slug){
-        $categories=$this->getsubgroup();
-        $sub_categories=$this->getsubgroupcategories();
-        $cat_product=$this->getcategoriesproduct();
-        $img_url=$this->server_image_path;
-        $blog_category=$this->blogcategory();
-       
-        $current_blog=DB::table('blogs')->where('slug',$slug)->first();
-        // dd($current_blog);
-        $current_blog_image=DB::table('images')->where('imageable_id',$current_blog->id)
-        ->where('images.imageable_type','App\blog')->first();
     
-        return view('Layout.Pages.Blog.blogpost_content',compact('categories','sub_categories','cat_product','img_url','blog_category','current_blog','current_blog_image'));
-    }
 
     //one-page
     public function gallery(){

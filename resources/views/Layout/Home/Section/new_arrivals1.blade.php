@@ -59,9 +59,11 @@
               </div>
               <div class="prd-action">
                 <div class="prd-action-left">
-                  <form action="#">
+   
+                  <form action="{{asset('cartpage/'.$cat_product[$i]->product_sub_cat.'/'.$cat_product[$i]->product_cat.'/'.$cat_product[$i]->slug)}}">
                     <button class="btn js-prd-addtocart" data-product='{"name": "Antimicrobial Skin Cleanser", "path":"{{$img_url}}{{$cat_product[$i]->img_path}}", "url":"", "aspect_ratio":0.778}'>Add To Cart</button>
                   </form>
+    
                 </div>
               </div>
             </div>

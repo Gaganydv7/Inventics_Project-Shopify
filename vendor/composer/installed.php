@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '9b10860fd1cbf939463107a5ed0689c3d216650a',
+    'reference' => '892dd5eb54daa1c959f68b60bfa1e05f33df1f11',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -123,15 +123,6 @@
       array (
       ),
       'reference' => 'c13c0be93cff50f88bbd70827d993026821914dd',
-    ),
-    'guzzlehttp/psr7' => 
-    array (
-      'pretty_version' => '1.8.2',
-      'version' => '1.8.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'dc960a912984efb74d0a90222870c72c87f10c91',
     ),
     'hamcrest/hamcrest-php' => 
     array (
@@ -338,15 +329,6 @@
         0 => 'v6.20.25',
       ),
     ),
-    'intervention/image' => 
-    array (
-      'pretty_version' => '2.5.1',
-      'version' => '2.5.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
-    ),
     'jakub-onderka/php-console-color' => 
     array (
       'replaced' => 
@@ -384,7 +366,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '9b10860fd1cbf939463107a5ed0689c3d216650a',
+      'reference' => '892dd5eb54daa1c959f68b60bfa1e05f33df1f11',
     ),
     'laravel/tinker' => 
     array (
@@ -394,6 +376,15 @@
       array (
       ),
       'reference' => '04ad32c1a3328081097a181875733fa51f402083',
+    ),
+    'laravel/ui' => 
+    array (
+      'pretty_version' => 'v1.0.0',
+      'version' => '1.0.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '7ea4b47cb9e47117ea8557e1d463d25900a7df0b',
     ),
     'league/commonmark' => 
     array (
@@ -649,22 +640,6 @@
         0 => '1.0',
       ),
     ),
-    'psr/http-message' => 
-    array (
-      'pretty_version' => '1.0.1',
-      'version' => '1.0.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
-    ),
-    'psr/http-message-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
-    ),
     'psr/log' => 
     array (
       'pretty_version' => '1.1.3',
@@ -699,15 +674,6 @@
       array (
       ),
       'reference' => 'e4573f47750dd6c92dca5aee543fa77513cbd8d3',
-    ),
-    'ralouphie/getallheaders' => 
-    array (
-      'pretty_version' => '3.0.3',
-      'version' => '3.0.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '120b605dfeb996808c31b6477290a714d356e822',
     ),
     'ramsey/uuid' => 
     array (

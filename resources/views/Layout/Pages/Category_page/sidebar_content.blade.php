@@ -4,7 +4,7 @@
     <div class="holder breadcrumbs-wrap mt-0">
       <div class="container">
         <ul class="breadcrumbs">
-          <li><a href="{{route('home')}}">Home</a></li>
+          <li><a href="{{route('med')}}">Home</a></li>
           <li><span>{{ strtoupper($slug) }} </span></li>
         </ul>
       </div>
@@ -217,8 +217,8 @@
                 <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
                   <div class="prd-inside">
                     <div class="prd-img-area">
-                      <a href="##" class="prd-img image-hover-scale image-container">
-                        <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{$img_url}}{{$product->img_path}}" alt="Leather Pegged Pants" class="js-prd-img lazyload fade-up">
+                      <a href="{{asset('page1/'.$product->product_sub_cat.'/'.$product->product_cat.'/'.$product->slug)}}" class="prd-img image-hover-scale image-container">
+                        <img src="{{$img_url}}{{$product->img_path}}" data-src="{{$img_url}}{{$product->img_path}}" alt="Leather Pegged Pants" class="js-prd-img lazyload fade-up">
                         <div class="foxic-loader"></div>
                         <div class="prd-big-squared-labels">
                         </div>

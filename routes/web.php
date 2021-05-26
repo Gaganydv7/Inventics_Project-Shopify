@@ -16,7 +16,7 @@
 // });
 
 
-Route::get('/','pagesController@front')->name('home');
+Route::get('/','pagesController@front')->name('med');
 
 
 
@@ -38,25 +38,27 @@ Route::get('/Horizontal-filter','categoryController@horizontal')->name('horizont
 Route::get('/listing-view','categoryController@listing')->name('listing');
 Route::get('/empty-category','categoryController@empty')->name('empty');
 
-Route::get('/Cart-page','pagesController@cartpage')->name('cartpage');
+Route::group(['middleware' => ['auth']], function() {
+Route::get('cartpage/{catgroup}/{catname}/{slug}','pagesController@cartpage')->name('cartpage');
 Route::get('/Empty-Cart','pagesController@emptycart')->name('emptycart');
 Route::get('/Checkout-varient1','pagesController@varient1')->name('varient1');
 Route::get('/Checkout-varient2','pagesController@varient2')->name('varient2');
 Route::get('/Checkout-varient3','pagesController@varient3')->name('varient3');
+});
 
-Route::get('/Login','pagesController@login')->name('login');
-Route::get('/Create-account','pagesController@create')->name('create');
-Route::get('/Account-details','pagesController@details')->name('details');
-Route::get('/Account-address','pagesController@address')->name('address');
-Route::get('/Order-history','pagesController@order')->name('order');
-Route::get('/Wishlist','pagesController@wishlist')->name('wishlist');
+Route::get('/Login','AccountController@login')->name('login');
+Route::get('/Create-account','AccountController@create')->name('create');
+Route::get('/Account-details','AccountController@details')->name('details');
+Route::get('/Account-address','AccountController@address')->name('address');
+Route::get('/Order-history','AccountController@order')->name('order');
+Route::get('/Wishlist','AccountController@wishlist')->name('wishlist');
 
-Route::get('/Right-sidebar','pagesController@rightside')->name('rightside');
-Route::get('/Left-sidebar','pagesController@leftside')->name('leftside');
-Route::get('/No-sidebar','pagesController@noside')->name('noside');
-Route::get('/Sticky-sidebar','pagesController@stickyside')->name('stickyside');
-Route::get('/Grid','pagesController@grid')->name('grid');
-Route::get('blogpost/{slug}','pagesController@blogpost')->name('blogpost');
+Route::get('rightside','BlogController@rightside')->name('rightside');
+Route::get('/Left-sidebar','BlogController@leftside')->name('leftside');
+Route::get('/No-sidebar','BlogController@noside')->name('noside');
+Route::get('/Sticky-sidebar','BlogController@stickyside')->name('stickyside');
+Route::get('/Grid','BlogController@grid')->name('grid');
+Route::get('blogpost/{slug}','BlogController@blogpost')->name('blogpost');
 
 
 Route::get('/gallery','pagesController@gallery')->name('gallery');
@@ -71,6 +73,6 @@ Route::get('/Coming-soon','pagesController@soon')->name('soon');
 
 
 
+Auth::routes();
 
-
-
+Route::get('/home', 'HomeController@index')->name('home');

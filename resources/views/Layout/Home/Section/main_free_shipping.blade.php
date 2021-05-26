@@ -1,6 +1,6 @@
 <div class="holder mt-0">
   <div class="container">
-  <a href="page1/{{$cat_product[0]->slug}}">hello</a>
+  <a href="##"></a>
     <div class="row no-gutters justify-content-center py-3 py-sm-0">
       <div class="col-sm">
         <div class="shop-feature-compact row">

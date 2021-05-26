@@ -4,7 +4,7 @@
     <div class="holder breadcrumbs-wrap mt-0">
         <div class="container">
             <ul class="breadcrumbs">
-                <li><a href="{{route('index')}}">Home</a></li>
+                <li><a href="##">Home</a></li>
                 <li><span>Cart</span></li>
             </ul>
         </div>
@@ -14,6 +14,8 @@
             <div class="page-title text-center">
                 <h1>Shopping Cart</h1>
             </div>
+
+            
             <div class="row">
                 <div class="col-lg-11 col-xl-13">
                     <div class="cart-table">
@@ -30,7 +32,7 @@
                         </div>
                         <div class="cart-table-prd">
                             <div class="cart-table-prd-image">
-                                <a href="##" class="prd-img"><img class="lazyload fade-up" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/skins/fashion/products/product-01-1.jpg" alt=""></a>
+                                <a href="##" class="prd-img"><img class="lazyload fade-up" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="{{$img_url}}{{$product_images[0]->path}}" alt=""></a>
                             </div>
                             <div class="cart-table-prd-content-wrap">
                                 <div class="cart-table-prd-info">
@@ -55,7 +57,9 @@
                                 <a href="#" class="cart-table-prd-remove" data-tooltip="Remove Product"><i class="icon-recycle"></i></a>
                             </div>
                         </div>
-                        <div class="cart-table-prd">
+
+
+                        <!-- <div class="cart-table-prd">
                             <div class="cart-table-prd-image">
                                 <a href="##" class="prd-img"><img class="lazyload fade-up" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/skins/fashion/products/product-16-1.jpg" alt=""></a>
                             </div>
@@ -106,10 +110,14 @@
                             <div class="cart-table-prd-action">
                                 <a href="#" class="cart-table-prd-remove" data-tooltip="Remove Product"><i class="icon-recycle"></i></a>
                             </div>
-                        </div>
+                        </div> -->
+
                     </div>
                     <div class="text-center mt-1"><a href="#" class="btn btn--grey">Clear All</a></div>
-                    <div class="d-none d-lg-block">
+
+@include('Layout.Common.may_also_like')
+
+                    <!-- <div class="d-none d-lg-block">
                         <div class="mt-4"></div>
                         <div class="holder">
                             <div class="container">
@@ -117,8 +125,11 @@
                                     <h2 class="h1-style">You may also like</h2>
                                     <div class="carousel-arrows carousel-arrows--center"></div>
                                 </div>
-                                <div class="prd-grid prd-carousel js-prd-carousel slick-arrows-aside-simple slick-arrows-mobile-lg data-to-show-4 data-to-show-md-3 data-to-show-sm-3 data-to-show-xs-2" data-slick='{"slidesToShow": 4, "slidesToScroll": 2, "responsive": [{"breakpoint": 992,"settings": {"slidesToShow": 3, "slidesToScroll": 1}},{"breakpoint": 768,"settings": {"slidesToShow": 2, "slidesToScroll": 1}},{"breakpoint": 480,"settings": {"slidesToShow": 2, "slidesToScroll": 1}}]}'>
-                                    <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
+                                <div class="prd-grid prd-carousel js-prd-carousel slick-arrows-aside-simple slick-arrows-mobile-lg data-to-show-4 data-to-show-md-3 data-to-show-sm-3 data-to-show-xs-2" data-slick='{"slidesToShow": 4, "slidesToScroll": 2, "responsive": [{"breakpoint": 992,"settings": {"slidesToShow": 3, "slidesToScroll": 1}},{"breakpoint": 768,"settings": {"slidesToShow": 2, "slidesToScroll": 1}},{"breakpoint": 480,"settings": {"slidesToShow": 2, "slidesToScroll": 1}}]}'> -->
+
+
+
+                                    <!-- <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
                                         <div class="prd-inside">
                                             <div class="prd-img-area">
                                                 <a href="##" class="prd-img image-hover-scale image-container">
@@ -158,7 +169,7 @@
                                                     </div>
                                                     <div class="prd-action">
                                                         <form action="#">
-                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Midi Dress", "path":"images/skins/fashion/products/product-06-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Midi Dress", "path":"images/skins/fashion/products/product-06-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -173,15 +184,18 @@
                                                     <div class="prd-action">
                                                         <div class="prd-action-left">
                                                             <form action="#">
-                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Midi Dress", "path":"images/skins/fashion/products/product-06-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Midi Dress", "path":"images/skins/fashion/products/product-06-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
+                                    </div> -->
+
+
+                                    
+                                    <!-- <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
                                         <div class="prd-inside">
                                             <div class="prd-img-area">
                                                 <a href="##" class="prd-img image-hover-scale image-container">
@@ -218,7 +232,7 @@
                                                     </div>
                                                     <div class="prd-action">
                                                         <form action="#">
-                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Stand Collar Shirt", "path":"images/skins/fashion/products/product-17-1.png", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Stand Collar Shirt", "path":"images/skins/fashion/products/product-17-1.png", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -234,15 +248,15 @@
                                                     <div class="prd-action">
                                                         <div class="prd-action-left">
                                                             <form action="#">
-                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Stand Collar Shirt", "path":"images/skins/fashion/products/product-17-1.png", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Stand Collar Shirt", "path":"images/skins/fashion/products/product-17-1.png", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
+                                    </div> -->
+                                    <!-- <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
                                         <div class="prd-inside">
                                             <div class="prd-img-area">
                                                 <a href="##" class="prd-img image-hover-scale image-container">
@@ -275,7 +289,7 @@
                                                     </div>
                                                     <div class="prd-action">
                                                         <form action="#">
-                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Genuine Leather", "path":"images/skins/fashion/products/product-21-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Genuine Leather", "path":"images/skins/fashion/products/product-21-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -290,15 +304,15 @@
                                                     <div class="prd-action">
                                                         <div class="prd-action-left">
                                                             <form action="#">
-                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Genuine Leather", "path":"images/skins/fashion/products/product-21-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Genuine Leather", "path":"images/skins/fashion/products/product-21-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
+                                    </div> -->
+                                    <!-- <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
                                         <div class="prd-inside">
                                             <div class="prd-img-area">
                                                 <a href="##" class="prd-img image-hover-scale image-container">
@@ -330,7 +344,7 @@
                                                     </div>
                                                     <div class="prd-action">
                                                         <form action="#">
-                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Pureboost Shoes", "path":"images/skins/fashion/products/product-26-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Pureboost Shoes", "path":"images/skins/fashion/products/product-26-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -345,15 +359,15 @@
                                                     <div class="prd-action">
                                                         <div class="prd-action-left">
                                                             <form action="#">
-                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Pureboost Shoes", "path":"images/skins/fashion/products/product-26-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Pureboost Shoes", "path":"images/skins/fashion/products/product-26-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
+                                    </div> -->
+                                    <!-- <div class="prd prd--style2 prd-labels--max prd-labels-shadow ">
                                         <div class="prd-inside">
                                             <div class="prd-img-area">
                                                 <a href="##" class="prd-img image-hover-scale image-container">
@@ -385,7 +399,7 @@
                                                     </div>
                                                     <div class="prd-action">
                                                         <form action="#">
-                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Multiple Pocket", "path":"images/skins/fashion/products/product-30-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                            <button class="btn js-prd-addtocart" data-product='{"name": "Multiple Pocket", "path":"images/skins/fashion/products/product-30-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -400,19 +414,22 @@
                                                     <div class="prd-action">
                                                         <div class="prd-action-left">
                                                             <form action="#">
-                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Multiple Pocket", "path":"images/skins/fashion/products/product-30-1.jpg", "url":"{{route("page1")}}", "aspect_ratio":0.778}'>Add To Cart</button>
+                                                                <button class="btn js-prd-addtocart" data-product='{"name": "Multiple Pocket", "path":"images/skins/fashion/products/product-30-1.jpg", "url":"{##", "aspect_ratio":0.778}'>Add To Cart</button>
                                                             </form>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
+
+                                <!-- </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
                 <div class="col-lg-7 col-xl-5 mt-3 mt-md-0">
                     <div class="cart-promo-banner">
                         <div class="cart-promo-banner-inside">

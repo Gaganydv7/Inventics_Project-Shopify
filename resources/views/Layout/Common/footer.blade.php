@@ -40,7 +40,7 @@
           <div class="col-lg col-xl last-mobile">
             <div class="footer-block">
               <div class="footer-logo">
-                <a href="{{route('index')}}"><img class="lazyload fade-up" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{{asset('images/skins/fashion/logo.png')}} , {{asset('images/skins/fashion/logo.png')}}" alt="Logo"></a>
+                <a href="##"><img class="lazyload fade-up" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="{{asset('images/skins/fashion/logo.png')}} , {{asset('images/skins/fashion/logo.png')}}" alt="Logo"></a>
               </div>
               <div class="collapsed-content">
                 <ul>
@@ -102,7 +102,7 @@
               <div class="collapsed-content">
                 <ul>
                   <li><a href="{{route('details')}}">My Account</a></li>
-                  <li><a href="{{route('cartpage')}}">View Cart</a></li>
+                  <li><a href="##">View Cart</a></li>
                   <li><a href="account-wishlist.html">My Wishlist</a></li>
                   <li><a href="account-history.html">Order Status</a></li>
                   <li><a href="account-history.html">Track My Order</a></li>
@@ -201,7 +201,7 @@
               </a>
               <div class="col popup-addedtocart_text">
                 <a href="##" class="popup-addedtocart_title"></a>
-                <span class="popup-addedtocart_message">Added to <a href="{{route('cartpage')}}" class="underline">Cart</a></span>
+                <span class="popup-addedtocart_message">Added to <a href="##" class="underline">Cart</a></span>
                 <span class="popup-addedtocart_error_message"></span>
               </div>
             </div>

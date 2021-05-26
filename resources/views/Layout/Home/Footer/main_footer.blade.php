@@ -113,7 +113,7 @@
         <div class="row vert-margin-middle">
           <div class="col-sm footer-bottom-col-left">
             <div class="footer-logo">
-              <a href="{{route('index')}}" class="logo"><img srcset="images/skins/medical/logo.png , images/skins/medical/logo.png" alt="Logo"></a>
+              <a href="##" class="logo"><img srcset="images/skins/medical/logo.png , images/skins/medical/logo.png" alt="Logo"></a>
             </div>
           </div>
           <div class="col-sm footer-bottom-col-right">
@@ -199,7 +199,7 @@
               </a>
               <div class="col popup-addedtocart_text">
                 <a href="# " class="popup-addedtocart_title"></a>
-                <span class="popup-addedtocart_message">Added to <a href="{{route('cartpage')}}" class="underline">Cart</a></span>
+                <span class="popup-addedtocart_message">Added to <a href="##" class="underline">Cart</a></span>
                 <span class="popup-addedtocart_error_message"></span>
               </div>
             </div>
@@ -265,7 +265,7 @@
   </div>
   <!-- payment note -->
   <div class="footer-sticky">
-    <div class="payment-notification-wrap js-pn" data-visible-time="3000" data-hidden-time="3000" data-delay="500" data-from="Aberdeen,Bakersfield,Birmingham,Cambridge,Youngstown" data-products='[{"productname":"Leather Pegged Pants", "productlink":"product.html","productimage":"{{$img_url}}{{$cat_product[rand(0,count($cat_product))]->img_path}}"},{"productname":"Black Fabric Backpack", "productlink":"product.html","productimage":"{{$img_url}}{{$cat_product[rand(0,count($cat_product))]->img_path}}"},{"productname":"Combined Chunky Sneakers", "productlink":"product.html","productimage":"{{$img_url}}{{$cat_product[rand(0,count($cat_product))]->img_path}}"}]'>
+    <div class="payment-notification-wrap js-pn" data-visible-time="3000" data-hidden-time="3000" data-delay="500" data-from="Aberdeen,Bakersfield,Birmingham,Cambridge,Youngstown" data-products='[{"productname":"Leather Pegged Pants", "productlink":"product.html","productimage":"{{$img_url}}{{$cat_product[rand(0,count($cat_product)-1)]->img_path}}"},{"productname":"Black Fabric Backpack", "productlink":"product.html","productimage":"{{$img_url}}{{$cat_product[rand(0,count($cat_product)-1)]->img_path}}"},{"productname":"Combined Chunky Sneakers", "productlink":"product.html","productimage":"{{$img_url}}{{$cat_product[rand(0,count($cat_product)-1)]->img_path}}"}]'>
       <div class="payment-notification payment-notification--squared">
         <div class="payment-notification-inside">
           <div class="payment-notification-container">

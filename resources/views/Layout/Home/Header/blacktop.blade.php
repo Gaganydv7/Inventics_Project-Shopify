@@ -68,6 +68,7 @@
                   </div>
                 </div>
               </div>
+              
               <!-- /Header Currency -->
               <div class="hdr_container_desktop">
                 <!-- Header Account -->

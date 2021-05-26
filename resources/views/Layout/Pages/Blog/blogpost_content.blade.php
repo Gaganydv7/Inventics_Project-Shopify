@@ -5,7 +5,7 @@
     <div class="holder breadcrumbs-wrap mt-0">
         <div class="container">
             <ul class="breadcrumbs">
-                <li><a href="{{route('index')}}">Home</a></li>
+                <li><a href="{{route('med')}}">Home</a></li>
                 <li><span>Blog Post</span></li>
             </ul>
         </div>

@@ -4,40 +4,42 @@
     <div class="holder breadcrumbs-wrap mt-0">
       <div class="container">
         <ul class="breadcrumbs">
-          <li><a href="{{route('index')}}">Home</a></li>
+          <li><a href="{{route('med')}}">Home</a></li>
           <li><span>Our Blog</span></li>
         </ul>
-      </div>
+      </div> 
     </div>
     <div class="holder">
-      <div class="container">
+      <div class="container"> 
         <div class="page-title text-center">
           <h1>Our Blog</h1>
         </div>
         <div class="row">
           <div class="col-md-14 aside aside--content">
             <div class="post-prws-listing">
+            @foreach($blog_category as $blog)
               <div class="post-prw">
                 <div class="row vert-margin-middle">
                   <div class="post-prw-img col-md-7">
                     <a href="blog-post.html">
-                      <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/blog/blog-01.png" class="lazyload fade-up" alt="">
+                      <img src="{{$img_url}}{{$blog->path}}" data-src="{{$img_url}}{{$blog->path}}" alt="">
                     </a>
                   </div>
                   <div class="post-prw-text col-md-11">
                     <div class="post-prw-links">
-                      <div class="post-prw-date"><i class="icon-calendar"></i>10 nov, 2020</div>
+                      <div class="post-prw-date"><i class="icon-calendar"></i>{{$blog->created_at}}</div>
                       <div class="post-prw-date"><i class="icon-chat"></i>5 comments</div>
                     </div>
-                    <h4 class="post-prw-title"><a href="blog-post.html">Home page visual builder</a></h4>
-                    <div class="post-prw-teaser">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </div>
+                    <h4 class="post-prw-title"><a href="blog-post.html">{{$blog->title}}</a></h4>
+                    <div class="post-prw-teaser">{{$blog->excerpt}}</div>
                     <div class="post-prw-btn">
                       <a href="blog-post.html" class="btn btn--sm">Read More</a>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="post-prw">
+              @endforeach
+              <!-- <div class="post-prw">
                 <div class="row vert-margin-middle">
                   <div class="post-prw-img col-md-7">
                     <a href="blog-post.html">
@@ -56,8 +58,9 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="post-prw">
+              </div> -->
+
+              <!-- <div class="post-prw">
                 <div class="row vert-margin-middle">
                   <div class="post-prw-img col-md-7">
                     <a href="blog-post.html">
@@ -97,6 +100,7 @@
                   </div>
                 </div>
               </div>
+
               <div class="post-prw">
                 <div class="row vert-margin-middle">
                   <div class="post-prw-img col-md-7">
@@ -115,8 +119,13 @@
                       <a href="blog-post.html" class="btn btn--sm">Read More</a>
                     </div>
                   </div>
+
+
+                  
                 </div>
-              </div>
+              
+              </div> -->
+
             </div>
             <div class="pagination-wrap d-flex mt-4">
               <ul class="pagination mt-0">

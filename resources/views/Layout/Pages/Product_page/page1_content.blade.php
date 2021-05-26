@@ -6,7 +6,7 @@
     <div class="holder breadcrumbs-wrap mt-0">
       <div class="container">
         <ul class="breadcrumbs">
-          <li><a href="{{route('home')}}">Home</a></li>
+          <li><a href="{{route('med')}}">Home</a></li>
           <li><span>{{$product->name}}</span></li>
         </ul>
       </div>

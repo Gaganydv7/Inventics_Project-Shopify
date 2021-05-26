@@ -22,6 +22,35 @@
 
 
 <body class="template-product has-smround-btns has-loader-bg equal-height has-sm-container">
+<div>
+@if(session('success'))
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+{{session('success')}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+@endif
+@if(session('warning'))
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+{{session('warning')}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+@endif
+@if(session('danger'))
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+{{session('danger')}}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+@endif
+</div>
+
+
+
 <div> 
   <div>  @include('Layout.Home.Header.blacktop')     </div> 
   <div>  @include('Layout.Home.Header.main_header')  </div> 
